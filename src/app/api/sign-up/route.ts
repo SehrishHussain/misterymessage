@@ -17,7 +17,7 @@ import bcrypt from "bcryptjs";
         })
         if (existingUserVerificationByUsername) {
             return Response.json({
-                success: false, //cz registeration is done
+                success: false, //cz registration is done
                 message: "Username is already taken"
             }, {status: 400})
         }
@@ -45,7 +45,7 @@ import bcrypt from "bcryptjs";
             expiryDate.setHours(expiryDate.getHours() + 1)
 
             const newUser = new UserModel({
-                username,
+                    username,
                     email,
                     password: hashedPassword,
                     verifyCode,
@@ -72,10 +72,10 @@ import bcrypt from "bcryptjs";
         }
         return Response.json({
                 success: true,
-                message: "user registrered successfully. Please verify your email"
+                message: "user registered successfully. Please verify your email"
             }, {status: 201})
     } catch (error) {
-        console.error("Error regiustering user", error)
+        console.error("Error registering user", error)
         return Response.json({
             success: false,
             message: "error registering user"
