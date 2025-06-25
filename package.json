@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/components": "^0.1.1",
+    "@react-email/tailwind": "^1.0.5",
     "bcryptjs": "^3.0.2",
     "mongoose": "^8.15.0",
     "next": "15.3.2",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-email": "^4.0.16",
+    "react-email": "^4.0.17",
     "resend": "^4.5.2",
     "zod": "^3.24.4"
   },
@@ -27,7 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.10",
     "typescript": "^5"
   }
 }
