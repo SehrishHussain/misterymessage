@@ -6,7 +6,7 @@ export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     // Define public routes that should be accessible without authentication
-    const publicRoutes = ['/sign-in', '/sign-up', '/verify', '/'];
+    const publicRoutes = ['/sign-in', '/signup', '/verify', '/'];
 
     // Redirect authenticated users away from public routes to dashboard
     if (token && publicRoutes.includes(pathname)) {
@@ -25,7 +25,7 @@ export async function middleware(request: NextRequest) {
 export const config = {
     matcher: [
         '/sign-in',
-        '/sign-up',
+        '/signup',
         '/',
         '/dashboard/:path*',
         '/verify/:path*'

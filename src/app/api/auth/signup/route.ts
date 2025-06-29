@@ -68,6 +68,7 @@ import bcrypt from "bcryptjs";
         )
 
         if (!emailResponse.success){
+            console.error("Email error details:", emailResponse.message); 
             return Response.json({
                 success: false,
                 message: emailResponse.message
@@ -89,3 +90,5 @@ import bcrypt from "bcryptjs";
         
     }
  }
+
+ 
