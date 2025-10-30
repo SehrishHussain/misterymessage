@@ -47,21 +47,9 @@ const UserSchema: Schema <User> = new Schema({
         required: [true, "Password is required"],
 
     },
-    verifyCode:{
-        type: String,
-        required: [true, "Verify is required"]
+   
 
-    },
-
-    verifyCodeExpiry:{
-        type: Date,
-        required: [true, "VerifyDateExpiry is required"]
-        
-    },
-    isVerified: {
-        type: Boolean,
-        default: false
-    },
+  
 
     isAcceptingMessage: {
         type: Boolean,
