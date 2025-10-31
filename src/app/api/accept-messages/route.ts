@@ -4,6 +4,7 @@ import dbConnect from '@/lib/dbConnect';
 import UserModel from '@/model/User';
 import { User } from 'next-auth';
 
+
 export async function POST(request: Request) {
   // Connect to the database
   await dbConnect();
@@ -65,6 +66,9 @@ export async function GET(request: Request) {
   // Get the user session
   const session = await getServerSession(authOptions);
   const user = session?.user;
+  console.log("sesssion");
+  
+  console.log("Session user:", session?.user);
 
   // Check if the user is authenticated
   if (!session || !user) {
