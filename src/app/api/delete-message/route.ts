@@ -4,7 +4,7 @@ import dbConnect from '@/lib/dbConnect';
 import { User } from 'next-auth';
 import { Message } from '@/model/User';
 import { NextRequest } from 'next/server';
-import { authOptions } from '../../auth/[...nextauth]/options';
+import { authOptions } from '../auth/[...nextauth]/options';
 
 export async function DELETE(
   request: Request,
@@ -13,13 +13,14 @@ export async function DELETE(
   const messageId = params.messageid;
   await dbConnect();
   const session = await getServerSession(authOptions);
-  const _user: User = session?.user;
-  if (!session || !_user) {
+  
+  if (!session || !session.user) {
     return Response.json(
       { success: false, message: 'Not authenticated' },
       { status: 401 }
     );
   }
+  const _user = session.user as User;
 
   try {
     const updateResult = await UserModel.updateOne(
