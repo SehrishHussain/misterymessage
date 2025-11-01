@@ -18,4 +18,4 @@ jobs:
 
       - name: Delete old deployments (keep latest)
         run: |
-          npx vercel rm your-project-name --safe --yes --token=${{ secrets.VERCEL_TOKEN }}
+          npx vercel rm misterymessage --safe --yes --token=${{ secrets.VERCEL_TOKEN }}
