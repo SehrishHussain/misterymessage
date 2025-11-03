@@ -23,6 +23,7 @@
     "axios": "^1.6.3",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.1",
+    "cloudinary": "^2.8.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.10",
     "embla-carousel-autoplay": "^8.0.0-rc17",

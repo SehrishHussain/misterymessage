@@ -8,3 +8,7 @@ export interface ApiResponse{
     messages?: Array<Message>
 }
 
+export interface MessagesResponse extends ApiResponse {
+  publicMessages: Message[];
+  privateMessages: Message[];
+}
